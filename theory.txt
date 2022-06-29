@@ -1,0 +1,50 @@
+
+
+
+Java 7 -> Interface have only abstract methos
+Java 8 -> Interface can have abstract , default and static method. Default method need not to override
+
+System.gc -> finalyze() called  
+s1=new String("vivek")
+s1.interim().hashCode()-> SCP area 
+
+Hasmap apply lock on entire object.
+Segment locking or Bucket Locking in Concurrent Hashmap.
+
+
+
+
+
+
+
+
+
+
+Hi afternoon/evening,
+I am glad to be here for the interview.
+
+I am Vivek Kumar. I am from Bihar. 
+
+
+I have been working at LG R&D Lab as a Research engineer from Jan 2020. 
+
+i am having a total 2 yr to experience in Middilewere development using JAVA technology.
+Working with the organization i got exposure to implement bussiness logic based on OMA DM specs using java by following Agile process as well as scrum methodologies.
+
+Moreover, i have basic knowledge in Java frameworks and backend development.
+
+////////////////////////////////////////////////////////////
+On the area of my projects 
+FUMO Device Management
+Implementing functionality based on OMA DM specs for update over the air.
+Expresso :
+Implementing functionality for operator requirement to manage operator relation.
+////////////////////////////////
+
+As far as my qualification is concerned i secured BE in Computer Science & Engineering from RGPV university, Madhya Pradesh, in 2019.
+
+About my strengths, I’m puctual and honest towards my work and enthusiasm to learn new things. I’m a hard worker and i work smart.
+ /////////////////////////////////////////////With respect to weakness, shyness was the one i faced earlier and now i was able to overcome it with confidence and passion towards work.
+
+
+That’s a brief about me, and thanks for this opportunity and your concern to know about me.

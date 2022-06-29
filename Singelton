@@ -1,0 +1,57 @@
+
+//https://www.geeksforgeeks.org/java-singleton-design-pattern-practices-examples/
+import java.util.*;
+//Lazy initialization with Double check locking so that minium thread to wait.
+public class Demo {
+  
+  public static void main(String[] args)
+	{
+	  ThreadDemo t=new ThreadDemo();
+	t.start();
+	ThreadDemo2 t2=new ThreadDemo2();
+	t2.start();
+	
+	}
+}
+class ThreadDemo extends Thread{
+   public void run(){
+	  Singelton s1=Singelton.getInstance();
+	  System.out.println(s1 );
+	}
+}
+class ThreadDemo2 extends Thread{
+   public void run(){
+	  Singelton s1=Singelton.getInstance();
+	  System.out.println(s1 );
+	}
+}
+class Singelton{
+  
+  private static Singelton singelton=null;
+  private Singelton(){System.out.println("Singelton");}
+  
+   static public Singelton getInstance(){
+     synchronized(Singelton.class){
+    if(singelton==null)
+      singelton=new Singelton();}
+    return singelton;
+    
+  }
+  
+}
+
+=========================================================
+// Eager Initialization
+public class GFG
+{
+  // public instance initialized when loading the class
+  private static final GFG instance = new GFG();
+ 
+  private GFG()
+  {
+    // private constructor
+  }
+  public static GFG getInstance(){
+        return instance;
+    }
+}

@@ -1,0 +1,17 @@
+//use the split() method of java.lang.String class to split a string based on the dot. Unlike comma, colon, or whitespace, 
+//a dot is not a common delimiter to join String,
+//in the regular expression. If you want to split String on the dot you need to escape dot as \\. instead of just passing "." to the
+class SLL{
+  
+  
+  public static void main(String[] args)
+	{
+	  String str="My.name.is.vivek";
+	  String ar[]=str.split("\\.");
+	  String f="";
+	  for(int i=ar.length-1;i>0;i--){
+	    f=f+ar[i]+".";
+	  }
+	  System.out.println(f+ar[0]);
+   }
+}

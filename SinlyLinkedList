@@ -1,0 +1,68 @@
+// Singly Linked list add &  reverse.
+
+class SLL{
+  Node head=null;
+  Node tail=null;
+  
+  public static void main(String[] args)
+	{
+	  SLL sll=new SLL();
+	  sll.addNode(5);
+	  sll.addNode(10);
+	  sll.addNode(20);
+	  sll.addNode(30);
+	  sll.display();
+	  sll.reverse();
+	  sll.display();
+	}
+	
+   void addNode(int data){
+    Node node=new Node(data);
+    
+    if(head==null){
+      head=node;
+      tail=node;
+    }
+    else{
+      tail.node=node;
+      tail=node;
+    }
+   }
+   
+   void reverse(){
+     Node prev=null;
+     Node current=head;
+     Node next=null;
+     while(current!=null){
+       next=current.node;
+       current.node=prev;
+       prev=current;
+       current=next;
+     }
+     head=prev;
+   }
+   void display(){
+     Node current;
+     current=head;
+     while(current!=null){
+        System.out.println(current.data);
+        current=current.node;
+     }
+      
+   }
+}
+public class Node {
+  
+  int data;
+  Node node;
+  public Node(int data){
+    this.data=data;
+  }
+}
+  
+  
+
+
+
+
+

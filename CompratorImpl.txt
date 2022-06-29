@@ -1,0 +1,77 @@
+//in the comparable example we could just sort by only one attribute, i.e., year but in the comparator,
+//we were able to use different attributes like rating, name, and year as well.
+
+//To summarize, if sorting of objects needs to be based on natural order then use Comparable 
+//whereas if you sorting needs to be done on attributes of different objects, then use Comparator in Java.
+package com.interviewprep.java8;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+ 
+// A class 'Movie' that implements Comparator
+class Movie
+{
+    private double rating;
+    private String name;
+    private int year;
+
+ 
+    // Constructor
+    public Movie(String nm, double rt, int yr)
+    {
+        this.name = nm;
+        this.rating = rt;
+        this.year = yr;
+    }
+ 
+    // Getter methods for accessing private data
+    public double getRating() { return rating; }
+    public String getName()   {  return name; }
+    public int getYear()      {  return year;  }
+
+}
+
+/*class MovieImpl implements Comparator<Movie>{
+
+	@Override
+	public int compare(Movie o1, Movie o2) {
+		////if 02-01 is positive return +1 and add in right side
+        	//if o2-o1 is negative return -1 add in left side
+		return (int) ((int)o1.getRating()-o2.getRating());
+	}
+	
+}*/
+ 
+// Driver class
+class CompratorImpl
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Movie> list = new ArrayList<Movie>();
+        list.add(new Movie("Force Awakens", 8.3, 2015));
+        list.add(new Movie("Star Wars", 8.1, 1977));
+        list.add(new Movie("Empire Strikes Back", 8.8, 1980));
+        list.add(new Movie("Return of the Jedi", 8.4, 1983));
+        //MovieImpl m=new MovieImpl();
+        
+        Collections.sort(list,(o1,o2) ->  o2.getYear()-o1.getYear());
+        
+        //Use compareTo because comparing String
+        Collections.sort(list,(o1,o2) -> o1.getName().compareTo(o2.getName()) );
+        
+        //Using Stream API+ Lambda
+        list.stream().sorted((o1,o2) ->  o2.getYear()-o1.getYear()).forEach(l->System.out.println(l.getYear()));
+ 
+        System.out.println("Movies after sorting : ");
+        for (Movie movie: list)
+        {
+            System.out.println(movie.getName() + " " +
+                               movie.getRating() + " " +
+                               movie.getYear());
+        }
+        
+    }
+
+	
+}

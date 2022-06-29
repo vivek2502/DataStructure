@@ -1,0 +1,25 @@
+
+An Enum is a unique type of data type in java which is generally a collection (set) of constants. 
+More specifically, a Java Enum type is a unique kind of Java class. 
+An Enum can hold constants, methods, etc. An Enum keyword can be used with if statement, switch statement, and iteration, etc
+// Java Program to show working of Enum
+// Keyword when declared outside the Class
+enum Days {
+	MONDAY,
+	TUESDAY,
+	WEDNESDAY,
+	THURSDAY,
+	FRIDAY,
+	SATURDAY,
+	SUNDAY;
+}
+
+public class temp {
+
+	// Driver method
+	public static void main(String[] args)
+	{
+		Days x = Days.FRIDAY;
+		System.out.println(x);
+	}
+}

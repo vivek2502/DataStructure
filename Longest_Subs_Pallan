@@ -1,0 +1,43 @@
+//import java.util.*;
+
+class SLL{
+  
+  
+  public static void main(String[] args)
+	{
+	  String s="abcbadsa";
+	  String check="";
+	  String result="";
+	  for(int k=3;k<=s.length();k++){
+	    for(int i=0;i<=s.length()-k;i++){
+	      //System.out.println(s.substring(i,i+k));
+	      for(int j=i;j<i+k;j++){
+	        System.out.print(s.charAt(j));
+	        check=check+s.charAt(j);
+	      }
+	      System.out.println();
+	      check=checkPallandrome(check);
+	      if(check.length()>result.length())
+	        result=check;
+	      System.out.println("Thsi is Pall :"+result);
+	      check="";
+	      
+	    }
+	   
+	  }
+	  System.out.println("This is longest Palla :"+ result);
+   }
+   static String checkPallandrome(String check)
+   {
+     StringBuffer sb=new StringBuffer(check);
+     return ((check.equals(sb.reverse()+""))? check : "");
+   }
+}
+
+  
+  
+
+
+
+
+
